@@ -2,28 +2,58 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Caffeinated optimism ☕️</title>
   </head>
-  <body>
-    <nav>
+  <body class='w-full h-full'>
+    <!--  -->
+    <div class='flex justify-center px-[1rem] py-[2rem]'>
+      <div class='max-w-2xl'>
+        <nav class='flex justify-between items-center pb-[3rem]'>
+          <div class='text-gray-400 tracking-wider font-mono'>[CaffeinatedOptimism.com ~] # ./home</div>
+          <div class='text-sm font-mono underline'><a href='#'>essays</a></div>
+        </nav>
 
-    </nav>
-    <h1>Doug</h1>
-    <p>I'm a hacker, cook, game developer, and writer.</p>
-    <p>I am part of the <a href='https://omelet.co'>Omlet.co</a> engineering team helping re-imagine observability tooling, as well as an open source contributor for Open Telemetry.</p>
-    <p>You can find me in NYC.</p>
-    <p>Tap <a href='#'>here</a> to show my email and get in touch.</p>
-    <p>If you want to check out my essays, start from here:</p>
-    <ol>
-      <li><a href='#'>Where is the gaming industry?</a></li>
-      <li><a href='#'>A game breakdown - Tetris</a></li>
-    </ol>
+        <article>
+          <div class='pb-[1rem] text-3xl font-serif text-gray-600'>
+            <h1>Doug</h1>
+          </div>
 
-    <form>
-      <p>I'm also publishing a private newsletter. I send it rarely, when I have something to say. I also read every reply. You can join it here:</p>
-      <input type='email' placeholder='you@email.com'/>
-      <br>
-      <button type="button">signup()</button>
-    </form>
+          <div class='pb-[1.5rem] font-mono tracking-wide'>
+            <p>I'm a game developer, cooking enthusiast, and writer.</p>
+          </div>
+
+          <div class='pb-[1.5rem] font-thin font-mono tracking-wide'>
+            <p>I am a lead engineer @ <a class='underline' href='https://omelet.co'>[Omlet.co]</a> helping re-imagine what's possible with observability tooling. I'm also an active member in the Open Telemetry community and help with open source from time to time.</p>
+          </div>
+
+          <div class='pb-[1.5rem] font-thin font-mono tracking-wide'>
+            <p>Go <a class='underline' href='#'>[here]</a> to show my email and get in touch.</p>
+          </div>
+
+          <div class='pb-[1.5rem] font-thin font-mono tracking-wide'>
+            <p>If you want to check out my essays, start with:</p>
+            <ol class='list-disc list-inside'>
+              <li class='pl-[1rem] underline'><a href='#'>Where is the gaming industry?</a></li>
+              <li class='pl-[1rem] underline'><a href='#'>A game breakdown - Tetris</a></li>
+            </ol>
+          </div>
+
+          <div class='pb-[1.5rem] font-thin font-mono tracking-wide'>
+            <p>You can find me in NYC.</p>
+          </div>
+
+          <div class='pb-[1.5rem] font-thin font-mono tracking-wide'>
+            <form>
+              <p>I'm also publishing a private newsletter. I send it rarely, when I have something to say. I also read every reply. You can join it here:</p>
+              <div class='flex flex-col gap-[.5rem] pt-[1rem]'>
+                <input class='block w-full px-[.75rem] py-[.5rem] border border-gray-600' type='email' placeholder='you@email.com'/>
+                <button class='block w-full px-[1rem] py-[.75rem] text-white bg-gray-600'type='button'>Sign up</button>
+              </div>
+            </form>
+          </div>
+        <article>
+      </div>
+    </div>
   </body>
 </html>
