@@ -41,35 +41,52 @@
           </div>
 
           <div class='pb-[1.75rem] font-thin font-mono tracking-wide text-gray-500'>
-            <p>You can find me in NYC. I also frequent Austin and SF.</p>
+            <p>You can find me in NYC, and I frequent Austin and SF.</p>
           </div>
 
+          <form
+            id='signup-form'
+            class='pb-[1.75rem] font-thin font-mono tracking-wide text-gray-500'
+            action='https://caffeinated-optimisim-backend-production.up.railway.app/newsletter_signup'
+            method='post'
+            target='hiddenFrame'
+          >
+            <p>I also publish a private newsletter. I send it rarely, when I have something to share. I also read every reply. You can join it here:</p>
+            <div class='flex flex-col gap-[.5rem] pt-[1rem]'>
+              <input
+                class='block w-full px-[.75rem] py-[.5rem] border border-gray-600'
+                type='email'
+                id='email'
+                name='email'
+                placeholder='you@email.com'
+              />
+              <button
+                id='signup-btn'
+                type='submit'
+                class='block w-full px-[1rem] py-[.75rem] text-white bg-gray-600 hover:bg-gray-500 active:bg-gray-400'
+              >
+                Sign up
+              </button>
+            </div>
+          </form>
+          <iframe name="hiddenFrame" class='hidden' onload='formSubmitted()'></iframe>
 
-          <div class='pb-[1.75rem] font-thin font-mono tracking-wide text-gray-500'>
-            <form
-              action='https://caffeinated-optimisim-backend-production.up.railway.app/newsletter_signup'
-              method='post'
-              target='hiddenFrame'
-            >
-              <p>I also publish a private newsletter. I send it rarely, when I have something to share. I also read every reply. You can join it here:</p>
-              <div class='flex flex-col gap-[.5rem] pt-[1rem]'>
-                <input
-                  class='block w-full px-[.75rem] py-[.5rem] border border-gray-600'
-                  type='email'
-                  id='email'
-                  name='email'
-                  placeholder='you@email.com'
-                />
-                <button
-                  type='submit'
-                  class='block w-full px-[1rem] py-[.75rem] text-white bg-gray-600 hover:bg-gray-500 active:bg-gray-400'
-                >
-                  Sign up
-                </button>
-              </div>
-            </form>
-            <iframe name="hiddenFrame" style="display:none;"></iframe>
-          </div>
+          <script>
+            function formSubmitted () {
+              const email = document.querySelector('#email')
+              if (email.value === '') {
+                return
+              }
+
+              const form = document.querySelector('#signup-form')
+              form.reset() // Clear form field
+
+              const btn = document.querySelector('#signup-btn');
+              btn.textContent = "Success - you're in!"
+
+              setTimeout(() => { btn.textContent = 'Sign up' }, 3000)
+            }
+          </script>
         </article>
       </div>
     </div>
